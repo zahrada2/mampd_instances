@@ -1,2 +1,5 @@
 # mampd_instances
-This repository will contain MAMPD instances.
+This repository containts MAMPD instance files.
+
+# format
+format description coming soon.
