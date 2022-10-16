@@ -6,6 +6,7 @@ This repository contains MAMPD instance files.
  - The instance names are in the following format: mapX_Y, where X is the number of the instance and Y is the number of items in the instance.
  - Files with .map extension contain information about the map. **All map files are the same for each map type.** This means that map0_180.map is equal to map4_180.map.
  - Files with .tsp extension contain information about the instance itself.
+ - Images of each instance are in a png_ps subdirectory. Black squares are obstacles, red squares are items, blue squares are agent starting locations and green squares are agent ending depots.
 
 ## map files
 - The map files are in standard MAPF format as seen in https://movingai.com/benchmarks/mapf.html .
