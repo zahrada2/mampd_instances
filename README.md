@@ -1,10 +1,10 @@
 # mampd_instances
-This repository containts MAMPD instance files.
+This repository contains MAMPD instance files.
 
 # format
  - For each map, there are 10 instances - e.g. map den_30_random_1 has instances map0_180, map1_180 ... map9_180.
  - The instance names are in the following format: mapX_Y, where X is the number of the instance and Y is the number of items in the instance.
- - Files with .map extension contain information about the map. *All map files are the same for each map type.* This means that map0_180.map is equal to map4_180.map.
+ - Files with .map extension contain information about the map. **All map files are the same for each map type.** This means that map0_180.map is equal to map4_180.map.
  - Files with .tsp extension contain information about the instance itself.
 
 ## map files
@@ -20,10 +20,12 @@ map
 Then, the map is encoded with 'T' denoting an obstacle and '.' denoting a free space.
 
 ## instance files
-The instance begin with a preamble specifying meta-information about the instance.
-Dimension of the instance denotes the number of all nodes in the map - all items, starting depots and ending depot.
 
-###NODE_COORD_SECTION
+### PREAMBLE
+The instances begin with a preamble specifying meta-information about each instance.
+Dimension of the instance denotes the number of all nodes in the map - all items, starting depots and ending depots.
+
+### NODE_COORD_SECTION
 List of all nodes of the map begins with NODE_COORD_SECTION, where each row denotes one node and its location, and has the following format:
 ID Y/ROW X/COLUMN
 
@@ -31,18 +33,17 @@ Note that ID starts from 1, and therefore, the last element should have ID equal
 
 This section ends with the keyword START_DEPOT_SECTION.
 
-###START_DEPOT_SECTION
+### START_DEPOT_SECTION
 In this section, each row contains one ID signifying a starting location of an agent.
-The ID points to the ID of nodes in NODE_COORD_SECTION.
+The ID points to the ID of nodes in **NODE_COORD_SECTION**.
 
-This section ends with row containing only *-1*.
+This section ends with row containing only **-1**.
 
-###END_DEPOT_SECTION
-Analogous to *START_DEPOT_SECTION*, this section contains information about agents ending depots - final goals.
-Each row contains an ID of one node from *NODE_COORD_SECTION*, and this section ends with a row containing only *-1*.
+### END_DEPOT_SECTION
+Analogous to **START_DEPOT_SECTION**, this section contains information about agents ending depots - final goals.
+Each row contains an ID of one node from **NODE_COORD_SECTION**, and this section ends with a row containing only **-1**.
 
-The whole file ends with *EOF* keyword.
-
+The whole file ends with **EOF** keyword.
 
 
 # TODO:
